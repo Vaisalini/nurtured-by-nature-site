@@ -8,35 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Swan Botanicals Color Palette */
+    --background: 46 67% 97%; /* Warm Ivory #F8F4E3 */
+    --foreground: 142 25% 35%; /* Deep Sage for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 142 25% 35%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 142 25% 35%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 158 60% 85%; /* Serene Mint #D9F8F0 */
+    --primary-foreground: 142 25% 25%; /* Darker sage for contrast */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 350 45% 82%; /* Blush Pink #F3B8C8 */
+    --secondary-foreground: 142 25% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 46 30% 95%; /* Very light warm ivory */
+    --muted-foreground: 142 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 100 25% 70%; /* Sage Green */
+    --accent-foreground: 142 25% 15%;
+
+    --botanical: 158 60% 85%; /* Serene Mint */
+    --botanical-foreground: 142 25% 25%;
+    
+    --blush: 350 45% 82%; /* Blush Pink */
+    --blush-foreground: 142 25% 25%;
+    
+    --sage: 100 25% 70%; /* Sage Green */
+    --sage-foreground: 142 25% 15%;
+    
+    --golden: 45 50% 80%; /* Golden Sand */
+    --golden-foreground: 142 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 158 30% 90%; /* Soft botanical border */
+    --input: 158 30% 95%; /* Light botanical input */
+    --ring: 158 60% 70%; /* Botanical focus ring */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +113,73 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* Typography Classes */
+  .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-subheading {
+    font-family: 'Lora', serif;
+  }
+
+  .font-body {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Gradient Backgrounds */
+  .bg-botanical-gradient {
+    background: linear-gradient(135deg, hsl(var(--botanical)) 0%, hsl(var(--primary)) 100%);
+  }
+
+  .bg-blush-gradient {
+    background: linear-gradient(135deg, hsl(var(--blush)) 0%, hsl(var(--secondary)) 100%);
+  }
+
+  .bg-sage-gradient {
+    background: linear-gradient(135deg, hsl(var(--sage)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  /* Smooth Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-gentle-pulse {
+    animation: gentle-pulse 4s ease-in-out infinite;
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
   }
 }
