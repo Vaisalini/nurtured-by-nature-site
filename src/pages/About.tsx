@@ -46,11 +46,11 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 bg-botanical-gradient">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <Badge variant="outline" className="mb-6">Our Story</Badge>
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-sage-foreground mb-6">
+          <Badge variant="outline" className="mb-6 animate-fade-in-up">Our Story</Badge>
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-sage-foreground mb-6 animate-stagger-1">
             Nurtured by Nature, Inspired by Mothers
           </h1>
-          <p className="font-subheading text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-subheading text-lg text-muted-foreground max-w-2xl mx-auto animate-stagger-2">
             Swan Botanicals was born from a mother's desire to create safe, effective skincare 
             that honors both family and nature.
           </p>
@@ -61,7 +61,7 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 animate-fade-in-left">
               <Badge variant="secondary" className="mb-4">Founder's Story</Badge>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-sage-foreground mb-6">
                 A Mother's Journey to Pure Skincare
@@ -93,11 +93,11 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="order-1 lg:order-2 animate-fade-in-right">
               <img 
                 src={motherNatureImage}
                 alt="Founder story"
-                className="rounded-lg shadow-lg hover-lift w-full"
+                className="rounded-lg shadow-lg hover-lift w-full animate-float"
               />
             </div>
           </div>
@@ -120,9 +120,9 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={value.title} className="hover-lift text-center">
+              <Card key={value.title} className={`hover-lift text-center animate-stagger-${index + 1} group`}>
                 <CardContent className="p-6">
-                  <value.icon className="h-12 w-12 text-sage mx-auto mb-4" />
+                  <value.icon className="h-12 w-12 text-sage mx-auto mb-4 group-hover:animate-pulse-glow transition-all duration-300" />
                   <h3 className="font-subheading text-lg font-semibold text-sage-foreground mb-3">
                     {value.title}
                   </h3>
@@ -150,17 +150,17 @@ const About = () => {
             {milestones.map((milestone, index) => (
               <div 
                 key={milestone.year}
-                className="flex items-center gap-6 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="flex items-center gap-6 animate-fade-in-up group hover:scale-105 transition-transform duration-300"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="flex-shrink-0 w-20 text-center">
-                  <div className="font-heading text-xl font-bold text-sage-foreground">
+                  <div className="font-heading text-xl font-bold text-sage-foreground group-hover:text-sage transition-colors">
                     {milestone.year}
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-4 h-4 bg-sage rounded-full"></div>
+                <div className="flex-shrink-0 w-4 h-4 bg-sage rounded-full group-hover:scale-125 transition-transform animate-pulse-glow"></div>
                 <div className="flex-1">
-                  <p className="font-subheading text-muted-foreground">{milestone.event}</p>
+                  <p className="font-subheading text-muted-foreground group-hover:text-sage-foreground transition-colors">{milestone.event}</p>
                 </div>
               </div>
             ))}
