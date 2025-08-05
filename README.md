@@ -3,11 +3,19 @@ A calming, elegant, and modern botanical skincare website. Inspired by the nurtu
 
 🌱 Features
 Serene, Botanical Theme: Botanical garden-inspired layouts, gentle colors, and soft animations.
+
 Modern Frontend: Built with React.js and Tailwind CSS for fast, responsive, component-driven UI.
+
 Smooth Animations: Framer Motion (or CSS) for elegant transitions and micro-interactions.
+
 Functional Shop: Product catalogue with real-time filters (skin type, concern, usage).
+
 Storytelling: About page with founder story and mother-inspired mission.
+
 Sustainability: AYUSH certifications, eco-packaging details, cruelty-free and dermatologist-verified claims.
+
 Content Hub: Blog with educational articles, customer skincare tips, and rituals.
+
 Contact & Newsletter: Beautiful, validated contact form and email signup.
+
 Mobile-First: Fully responsive, designed to look beautiful on all devices.
