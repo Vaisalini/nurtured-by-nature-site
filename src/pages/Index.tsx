@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Leaf, Shield, Heart, Star, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/hero-botanical.jpg';
@@ -71,13 +72,17 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Button variant="hero" size="lg" className="group">
-              Shop Collection
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Our Story
-            </Button>
+            <Link to="/shop">
+              <Button variant="hero" size="lg" className="group hover:scale-105 transition-transform">
+                Shop Collection
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button variant="outline" size="lg" className="hover:scale-105 transition-transform">
+                Our Story
+              </Button>
+            </Link>
           </div>
           
           {/* USPs */}
@@ -120,9 +125,11 @@ const Index = () => {
                 themselves and their families. That's why every formula is dermatologist-tested, 
                 cruelty-free, and made with 99% botanical ingredients.
               </p>
-              <Button variant="botanical" size="lg">
-                Learn Our Story
-              </Button>
+              <Link to="/about">
+                <Button variant="botanical" size="lg" className="hover:scale-105 transition-transform">
+                  Learn Our Story
+                </Button>
+              </Link>
             </div>
             <div className="relative">
               <img 
@@ -207,9 +214,11 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="hero" size="lg">
-              View All Products
-            </Button>
+            <Link to="/shop">
+              <Button variant="hero" size="lg" className="hover:scale-105 transition-transform">
+                View All Products
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -257,12 +266,16 @@ const Index = () => {
             Your skin deserves nothing but nature's best.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl">
-              Shop Now
-            </Button>
-            <Button variant="outline" size="xl">
-              Get Free Samples
-            </Button>
+            <Link to="/shop">
+              <Button variant="hero" size="xl" className="hover:scale-105 transition-transform">
+                Shop Now
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" size="xl" className="hover:scale-105 transition-transform">
+                Get Free Samples
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

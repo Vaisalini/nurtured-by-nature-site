@@ -49,18 +49,20 @@ const Navigation = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="relative">
+            <Button variant="ghost" size="icon" className="relative hover:scale-110 transition-transform">
               <Heart className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="relative">
+            <Button variant="ghost" size="icon" className="relative hover:scale-110 transition-transform">
               <ShoppingBag className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 bg-blush text-blush-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-blush text-blush-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse-glow">
                 0
               </span>
             </Button>
-            <Button variant="hero" size="sm">
-              Shop Now
-            </Button>
+            <Link to="/shop">
+              <Button variant="hero" size="sm" className="hover:scale-105 transition-transform">
+                Shop Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -93,18 +95,20 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className="hover:scale-110 transition-transform">
                   <Heart className="h-5 w-5" />
                 </Button>
-                <Button variant="ghost" size="icon" className="relative">
+                <Button variant="ghost" size="icon" className="relative hover:scale-110 transition-transform">
                   <ShoppingBag className="h-5 w-5" />
-                  <span className="absolute -top-1 -right-1 bg-blush text-blush-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-blush text-blush-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse-glow">
                     0
                   </span>
                 </Button>
-                <Button variant="hero" size="sm" className="flex-1">
-                  Shop Now
-                </Button>
+                <Link to="/shop" className="flex-1">
+                  <Button variant="hero" size="sm" className="w-full hover:scale-105 transition-transform">
+                    Shop Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
